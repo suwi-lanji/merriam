@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.twinkle {
+  animation: twinkle 4s infinite ease-in-out;
+}
+.star {
+  aspect-ratio: 1;
+  background: #f0e09c;
+  clip-path: polygon(50% 0,
+    calc(50%*(1 + sin(.4turn))) calc(50%*(1 - cos(.4turn))),
+    calc(50%*(1 - sin(.2turn))) calc(50%*(1 - cos(.2turn))),
+    calc(50%*(1 + sin(.2turn))) calc(50%*(1 - cos(.2turn))),
+    calc(50%*(1 - sin(.4turn))) calc(50%*(1 - cos(.4turn))) 
+   ); 
+}
+
+.moon { 
+  position: absolute; 
+  top: 15%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  height: 70px; 
+  width: 70px; 
+  box-shadow: -15px 15px 0 5px white  ; 
+  border-radius: 50%; 
+} 
