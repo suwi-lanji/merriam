@@ -24,6 +24,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+          <script
+      defer
+      data-website-id="679f1f8dc63fbab79089098c"
+      data-domain="merriam.vercel.app"
+      src="https://datafa.st/js/script.js">
+    </script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
